@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montaga&family=Montagu+Slab:opsz,wght@16..144,600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap");
+
+$poppins: "Poppins", sans-serif;
+$jakarta: "Plus Jakarta Sans", sans-serif;
+$montaguSlab: "Montagu Slab", serif;
+$montaga: "Montaga", serif;
+
+$container: #f4f4f4;
+$strokeMain: #e5e5e5;
+$txtMain: #525252;
+$navHeight: 72px;
+
+.nav_button {
+	border: 1.5px solid $strokeMain;
+	background-color: transparent;
+	min-height: $navHeight;
+	max-height: $navHeight;
+	padding: 0 28px;
+	box-sizing: border-box;
+	font-family: $montaguSlab;
+	font-weight: 600;
+	font-size: 14px;
+	color: $txtMain;
+
+	&:hover {
+		background-color: $container;
+	}
+}
+
+.nav_bar {
+	box-sizing: border-box;
+	min-height: $navHeight;
+	max-height: $navHeight;
+	width: 100vw;
+	// background-color: aquamarine;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1.5px solid $strokeMain;
+}

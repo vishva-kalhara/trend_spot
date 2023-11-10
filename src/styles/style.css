@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montaga&family=Montagu+Slab:opsz,wght@16..144,600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap");
+.nav_button {
+  border: 1.5px solid #e5e5e5;
+  background-color: transparent;
+  min-height: 72px;
+  max-height: 72px;
+  padding: 0 28px;
+  box-sizing: border-box;
+  font-family: "Montagu Slab", serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #525252;
+}
+.nav_button:hover {
+  background-color: #f4f4f4;
+}
+
+.nav_bar {
+  box-sizing: border-box;
+  min-height: 72px;
+  max-height: 72px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #e5e5e5;
+}/*# sourceMappingURL=style.css.map */
