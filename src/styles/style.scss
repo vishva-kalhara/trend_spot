@@ -7,25 +7,9 @@ $montaga: "Montaga", serif;
 
 $container: #f4f4f4;
 $strokeMain: #e5e5e5;
+$strokeSecondary: #a1a1a1;
 $txtMain: #525252;
 $navHeight: 72px;
-
-.nav_button {
-	border: 1.5px solid $strokeMain;
-	background-color: transparent;
-	min-height: $navHeight;
-	max-height: $navHeight;
-	padding: 0 28px;
-	box-sizing: border-box;
-	font-family: $montaguSlab;
-	font-weight: 600;
-	font-size: 14px;
-	color: $txtMain;
-
-	&:hover {
-		background-color: $container;
-	}
-}
 
 .nav_bar {
 	box-sizing: border-box;
@@ -37,4 +21,83 @@ $navHeight: 72px;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1.5px solid $strokeMain;
+
+	.nav_button {
+		border: 1.5px solid $strokeMain;
+		background-color: transparent;
+		min-height: $navHeight;
+		max-height: $navHeight;
+		padding: 0 28px;
+		box-sizing: border-box;
+		font-family: $montaguSlab;
+		font-weight: 600;
+		font-size: 14px;
+		color: $txtMain;
+
+		&:hover {
+			background-color: $container;
+		}
+	}
+
+	.NavLink {
+		display: inline-block;
+		position: relative;
+		margin: 0 16px;
+
+		input {
+			display: none;
+
+			&:checked + label {
+				div {
+					&:nth-child(2) {
+						div {
+							width: 25px;
+						}
+					}
+				}
+			}
+		}
+
+		label {
+			display: flex;
+			flex-direction: column;
+			div {
+				&:nth-child(1) {
+					font-family: $montaga;
+					font-size: 14px;
+					color: $txtMain;
+				}
+				&:nth-child(2) {
+					height: 2px;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					margin-top: 3px;
+
+					div {
+						width: 0px;
+						height: 2px;
+						background-color: $strokeSecondary;
+						transition: width 0.2s ease-in-out;
+					}
+				}
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&:hover {
+			label {
+				div {
+					&:nth-child(2) {
+						div {
+							width: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

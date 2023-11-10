@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montaga&family=Montagu+Slab:opsz,wght@16..144,600&family=Plus+Jakarta+Sans:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap");
-.nav_button {
+.nav_bar {
+  box-sizing: border-box;
+  min-height: 72px;
+  max-height: 72px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #e5e5e5;
+}
+.nav_bar .nav_button {
   border: 1.5px solid #e5e5e5;
   background-color: transparent;
   min-height: 72px;
@@ -11,17 +21,45 @@
   font-size: 14px;
   color: #525252;
 }
-.nav_button:hover {
+.nav_bar .nav_button:hover {
   background-color: #f4f4f4;
 }
-
-.nav_bar {
-  box-sizing: border-box;
-  min-height: 72px;
-  max-height: 72px;
-  width: 100vw;
+.nav_bar .NavLink {
+  display: inline-block;
+  position: relative;
+  margin: 0 16px;
+}
+.nav_bar .NavLink input {
+  display: none;
+}
+.nav_bar .NavLink input:checked + label div:nth-child(2) div {
+  width: 25px;
+}
+.nav_bar .NavLink label {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1.5px solid #e5e5e5;
+  flex-direction: column;
+}
+.nav_bar .NavLink label div:nth-child(1) {
+  font-family: "Montaga", serif;
+  font-size: 14px;
+  color: #525252;
+}
+.nav_bar .NavLink label div:nth-child(2) {
+  height: 2px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.nav_bar .NavLink label div:nth-child(2) div {
+  width: 0px;
+  height: 2px;
+  background-color: #a1a1a1;
+  transition: width 0.2s ease-in-out;
+}
+.nav_bar .NavLink label:hover {
+  cursor: pointer;
+}
+.nav_bar .NavLink:hover label div:nth-child(2) div {
+  width: 5px;
 }/*# sourceMappingURL=style.css.map */
